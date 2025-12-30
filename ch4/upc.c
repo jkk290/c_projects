@@ -10,12 +10,18 @@
 
 int main(void)
 {
-	int upc;
+	int d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11;
 	printf("Enter the first 11 digits of a UPC: ");
-	scanf("%11d", &upc);
+	scanf("%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d%1d", &d1, &d2, &d3, &d4, &d5, &d6, &d7, &d8, &d9, &d10, &d11);
+	
+	int sum1 = d1 + d3 + d5 + d7 + d9 + d11;
+	int sum2 = d2 + d4 + d6 + d8 + d10;
+	int total = (sum1 * 3) + sum2;
+	total--;
+	int remainder = total % 10;
+	int check_digit = 9 - remainder;
 
-	int d1 = upc % 100000000;
-	printf("%d\n", d1);
+	printf("Check digit: %d\n", check_digit);
 
 	return 0;
 }
