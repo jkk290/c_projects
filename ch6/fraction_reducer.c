@@ -4,10 +4,12 @@
 
 int main(void)
 {
-	int m, n;
+	int numerator, denominator;
 	printf("Enter a fraction (x/y): ");
-	scanf("%d %d", &m, &n);
+	scanf("%d/%d", &numerator, &denominator);
 
+	int m = numerator;
+	int n = denominator;
 	int remainder;
 	while (n != 0) {
 		remainder = m % n;
@@ -15,7 +17,8 @@ int main(void)
 		n = remainder;
 	}
 
-	printf("Greatest common divisor: %d\n", m);
+	int gcd = m;
+	printf("In lowest terms: %d/%d\n", numerator / gcd, denominator / gcd);
 
 	return 0;
 }
