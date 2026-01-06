@@ -1,5 +1,5 @@
 /* Translates an alphabetic phone number into numeric form */
-/* 2=ABC, 3=DEF, 4=GHI, 5=JKL, 6=MNO, 7=PRS, 8=TUV, 9=WXYZ */
+/* 2=ABC, 3=DEF, 4=GHI, 5=JKL, 6=MNO, 7=PQRS, 8=TUV, 9=WXYZ */
 
 #include <stdio.h>
 
@@ -26,7 +26,7 @@ int main(void)
 			case 'm': case 'n': case 'o': case 'M': case 'N': case 'O':
 				printf("%d", 6);
 				break;
-			case 'p': case 'r': case 's': case 'P': case 'R': case 'S':
+			case 'p': case 'q': case 'r': case 's': case 'P': case 'Q': case 'R': case 'S':
 				printf("%d", 7);
 				break;
 			case 't': case 'u': case 'v': case 'T': case 'U': case 'V':
