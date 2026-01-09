@@ -9,7 +9,7 @@ int main(void)
 	int a[N], i;
 
 	printf("Enter %d numbers: ", N);
-	for (i = 0; i < N; i++)
+	for (i = 0; i < (int) sizeof(a) / sizeof(a[0]); i++)
 		scanf("%d", &a[i]);
 
 	printf("In reverse order:");
